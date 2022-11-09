@@ -7,6 +7,6 @@ export const getRestaurants = (request: Request, response: Response) => {
   console.log(request.query);
   try {
   } catch (error) {
-    console.log(error);
+    console.log(error, 'THIS IS THE ERRROR CHEIF');
   }
 };

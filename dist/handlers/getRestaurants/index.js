@@ -8,7 +8,7 @@ const getRestaurants = (request, response) => {
     try {
     }
     catch (error) {
-        console.log(error);
+        console.log(error, 'THIS IS THE ERRROR CHEIF');
     }
 };
 exports.getRestaurants = getRestaurants;
