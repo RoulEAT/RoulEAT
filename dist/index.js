@@ -10,10 +10,7 @@ dotenv_1.default.config();
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
 app.use((0, cors_1.default)());
-app.get('/', (req, res) => {
-    res.send('<h1>Hello World From the Typescript Server!</h1>');
-});
 const port = process.env.PORT || 8000;
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`);
+    console.log(`Spinning the wheel on port ${port}`);
 });
