@@ -1,0 +1,46 @@
+.LocationContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 0.2rem;
+}
+
+.LocationInput {
+  background-color: var(--eggplant);
+  border: 0.1rem solid var(--snow);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  width: 50%;
+  color: var(--snow);
+  text-align: center;
+}
+
+.LocationInput::placeholder {
+  color: var(--snow);
+  opacity: 0.8;
+}
+
+.LocationInput:focus {
+  outline: none;
+}
+
+.LocationButton {
+  background-color: var(--eggplant);
+  border: 0.1rem solid var(--snow);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  color: var(--snow);
+}
+
+.LocationButton:hover {
+  background-color: var(--snow);
+  color: var(--forest);
+  transition: 0.5s;
+}
+
+.LocationError {
+  color: var(--fire);
+  font-size: 1.2rem;
+  text-align: center;
+}
