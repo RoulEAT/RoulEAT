@@ -26,5 +26,5 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express = __importStar(require("express"));
 const getRestaurants_1 = require("../handlers/getRestaurants");
 const router = express.Router();
-router.get('/get-restaurants', getRestaurants_1.getRestaurants);
+router.post('/get-restaurants', getRestaurants_1.getRestaurants);
 exports.default = router;
