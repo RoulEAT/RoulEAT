@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+///import { useNavigate } from 'react-router-dom';
+import { useGetRestaurants } from '../../../API/useGetRestaurants';
 import './styles.css';
 
 const Location = () => {
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
   const [location, setLocation] = useState<string | undefined>('');
   const [error, setError] = useState<string | undefined>('');
+  const {mutateAsync: getRestaurants} = useGetRestaurants();
 
-  const handleSubmit = (address: string | undefined) => {
+  const handleSubmit = async (address: string | undefined) => {
     try {
       setError('');
       if (!address) {
@@ -21,8 +23,11 @@ const Location = () => {
       */
       //navigate to wheel page
       setError('');
-      navigate('/wheel');
+      // navigate('/wheel');
+      const restaurants = await getRestaurants({term: 'tacos', location: 'ridgewood, ny'});
+      console.log(restaurants)
     } catch (error) {
+      console.log(error)
       setError(error as string);
     }
   };

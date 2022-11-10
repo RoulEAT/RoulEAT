@@ -1,6 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getSortedRestaurants = void 0;
+const getMiles = (meters) => {
+    return Number((meters * 0.000621371192).toFixed(2));
+};
 const getSortedRestaurants = (restaurants) => {
     const typedRestaurants = restaurants.map((restaurant) => {
         return {
@@ -18,7 +21,7 @@ const getSortedRestaurants = (restaurants) => {
             image: restaurant.image,
             phone: restaurant.phone,
             transactions: restaurant.transactions,
-            distance: restaurant.distance,
+            distance: getMiles(restaurant.distance),
         };
     });
     const openRestaurants = typedRestaurants.sort((a, b) => Number(a.isClosed) - Number(b.isClosed));
