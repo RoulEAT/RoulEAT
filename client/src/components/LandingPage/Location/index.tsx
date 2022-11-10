@@ -24,7 +24,7 @@ const Location = () => {
       //navigate to wheel page
       setError('');
       // navigate('/wheel');
-      const restaurants = await getRestaurants({term: 'pizza', location: 'ridgewood, ny'});
+      const restaurants = await getRestaurants({term: 'tacos', location: 'ridgewood, ny'});
       console.log(restaurants)
     } catch (error) {
       console.log(error)
