@@ -9,7 +9,7 @@ const apiV1 = axios.default.create({
   },
 });
 
-class RoulEatApi {
+export class RoulEatApi {
   static getRestaurants(term: string, location: string) {
     return apiV1.post('/yelp/get-restaurants', { term, location });
   }
