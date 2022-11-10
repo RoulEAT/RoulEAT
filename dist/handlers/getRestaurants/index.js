@@ -14,8 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getRestaurants = void 0;
 const axios_1 = __importDefault(require("axios"));
-// interface YelpResponse {
-// }
+const helpers_1 = require("./helpers");
 const getRestaurants = (request, response) => __awaiter(void 0, void 0, void 0, function* () {
     console.log(request.params);
     console.log(request.body);
@@ -27,11 +26,13 @@ const getRestaurants = (request, response) => __awaiter(void 0, void 0, void 0, 
                 Authorization: `Bearer ${process.env.YELP_API_KEY}`,
             },
         });
-        console.log(yelpResponse.businesses);
-        return response.status(200).json(yelpResponse.businesses);
+        const sortedRestaurants = (0, helpers_1.getSortedRestaurants)(yelpResponse.businesses);
+        console.log(sortedRestaurants);
+        return response.status(200).json(sortedRestaurants);
     }
     catch (error) {
-        console.log(error, 'THIS IS THE ERRROR CHEIF');
+        console.log(error, 'THIS IS THE ERROR CHIEF');
+        return response.status(500).json({ error });
     }
 });
 exports.getRestaurants = getRestaurants;

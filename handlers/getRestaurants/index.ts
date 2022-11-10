@@ -1,8 +1,6 @@
 import { Request, Response } from 'express';
 import axios from 'axios';
-
-// interface YelpResponse {
-// }
+import { getSortedRestaurants, YelpResponse } from './helpers';
 
 export const getRestaurants = async (request: Request, response: Response) => {
   console.log(request.params);
@@ -11,7 +9,7 @@ export const getRestaurants = async (request: Request, response: Response) => {
   const { term, location } = request.body;
 
   try {
-    const {data: yelpResponse} = await axios.get(
+    const { data: yelpResponse } = await axios.get(
       `https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}`,
       {
         headers: {
@@ -20,9 +18,13 @@ export const getRestaurants = async (request: Request, response: Response) => {
       }
     );
 
-    console.log(yelpResponse.businesses);
-    return response.status(200).json(yelpResponse.businesses);
+    const sortedRestaurants: YelpResponse[] = getSortedRestaurants(
+      yelpResponse.businesses
+    );
+    console.log(sortedRestaurants);
+    return response.status(200).json(sortedRestaurants);
   } catch (error) {
-    console.log(error, 'THIS IS THE ERRROR CHEIF');
+    console.log(error, 'THIS IS THE ERROR CHIEF');
+    return response.status(500).json({ error });
   }
 };
