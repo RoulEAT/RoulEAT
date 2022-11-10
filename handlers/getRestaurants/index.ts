@@ -3,9 +3,6 @@ import axios from 'axios';
 import { getSortedRestaurants, YelpResponse } from './helpers';
 
 export const getRestaurants = async (request: Request, response: Response) => {
-  console.log(request.params);
-  console.log(request.body);
-  console.log(request.query);
   const { term, location } = request.body;
 
   try {
@@ -21,10 +18,11 @@ export const getRestaurants = async (request: Request, response: Response) => {
     const sortedRestaurants: YelpResponse[] = getSortedRestaurants(
       yelpResponse.businesses
     );
-    console.log(sortedRestaurants);
+
     return response.status(200).json(sortedRestaurants);
+
   } catch (error) {
-    console.log(error, 'THIS IS THE ERROR CHIEF');
+    console.log(error, 'ERROR');
     return response.status(500).json({ error });
   }
 };

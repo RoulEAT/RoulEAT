@@ -16,9 +16,6 @@ exports.getRestaurants = void 0;
 const axios_1 = __importDefault(require("axios"));
 const helpers_1 = require("./helpers");
 const getRestaurants = (request, response) => __awaiter(void 0, void 0, void 0, function* () {
-    console.log(request.params);
-    console.log(request.body);
-    console.log(request.query);
     const { term, location } = request.body;
     try {
         const { data: yelpResponse } = yield axios_1.default.get(`https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}`, {
@@ -27,11 +24,10 @@ const getRestaurants = (request, response) => __awaiter(void 0, void 0, void 0, 
             },
         });
         const sortedRestaurants = (0, helpers_1.getSortedRestaurants)(yelpResponse.businesses);
-        console.log(sortedRestaurants);
         return response.status(200).json(sortedRestaurants);
     }
     catch (error) {
-        console.log(error, 'THIS IS THE ERROR CHIEF');
+        console.log(error, 'ERROR');
         return response.status(500).json({ error });
     }
 });
