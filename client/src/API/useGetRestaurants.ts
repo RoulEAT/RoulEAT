@@ -7,23 +7,23 @@ interface GetRestaurantParams {
 }
 
 interface BusinessLocation {
-  address1: String;
-  address2?: String;
-  zip_code: String;
+  address1: string;
+  address2?: string;
+  zip_code: string;
 }
 
 export interface GetRestaurantResponse {
-  id: String;
-  name: String;
-  url: String;
-  price: String;
-  rating: Number;
-  isClosed: Boolean;
+  id: string;
+  name: string;
+  url: string;
+  price: string;
+  rating: number;
+  isClosed: boolean;
   location: BusinessLocation;
-  image: String;
-  phone: String;
-  transactions: String[];
-  distance: Number;
+  image: string;
+  phone: string;
+  transactions: string[];
+  distance: number;
 }
 
 export const useGetRestaurants = () => {
