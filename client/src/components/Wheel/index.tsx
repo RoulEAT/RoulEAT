@@ -33,20 +33,25 @@ const Wheel = (props: WheelProps) => {
   }, [location, navigate])
 
   const selectItem = async () => {
-    if (selectedItemIndex === null) {
-      const randomIndex = Math.floor(Math.random() * items.length);
-      setSelectedItemIndex(randomIndex);
-      const selectedItem = items[randomIndex];
-      const restaurants = await getRestaurants({
-        term: selectedItem,
-        location: location || 'New York, NY',
-      });
-      setRestaurants(restaurants);
-      console.log(restaurants);
-      //this functionalitiy might be the only one necessary as when we close the modal we can then reset the state of this component back to null thus losing that weird reseetting visual
-    } else {
-      setSelectedItemIndex(null);
-      //leaving this else block so that the wheel resets properly during testing
+    try {
+      if (selectedItemIndex === null) {
+        const randomIndex = Math.floor(Math.random() * items.length);
+        setSelectedItemIndex(randomIndex);
+        const selectedItem = items[randomIndex];
+        const restaurants = await getRestaurants({
+          term: selectedItem,
+          location: location || 'New York, NY',
+        });
+        setRestaurants(restaurants);
+        console.log(restaurants);
+        //this functionalitiy might be the only one necessary as when we close the modal we can then reset the state of this component back to null thus losing that weird reseetting visual
+      } else {
+        setSelectedItemIndex(null);
+        //leaving this else block so that the wheel resets properly during testing
+      }
+    } catch (error) {
+      navigate('/');
+      //error handling in the case nothing is returned from the API
     }
   }
 
