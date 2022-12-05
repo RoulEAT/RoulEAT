@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { GetRestaurantResponse, useGetRestaurants } from '../../API/useGetRestaurants';
+import { useNavigate } from 'react-router-dom';
 import './styles.css';
 
 interface WheelProps {
@@ -9,6 +10,8 @@ interface WheelProps {
 const Wheel = (props: WheelProps) => {
 
   const { location } = props;
+
+  const navigate = useNavigate();
 
   const { mutateAsync: getRestaurants } = useGetRestaurants();
   const [selectedItemIdx, setSelectedItemIdx] = useState<number | null>(null);
@@ -22,6 +25,12 @@ const Wheel = (props: WheelProps) => {
     'Sushi',
     'Tacos',
   ]);
+
+  useEffect(() => {
+    if (!location) {
+      navigate('/');
+    }
+  }, [location, navigate])
 
   const selectItem = async () => {
     if (selectedItemIdx === null) {
