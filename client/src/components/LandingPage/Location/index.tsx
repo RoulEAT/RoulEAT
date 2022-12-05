@@ -1,13 +1,18 @@
 import React, { useState } from 'react';
-///import { useNavigate } from 'react-router-dom';
-import { useGetRestaurants } from '../../../API/useGetRestaurants';
+import { useNavigate } from 'react-router-dom';
 import './styles.css';
 
-const Location = () => {
-  //const navigate = useNavigate();
-  const [location, setLocation] = useState<string | undefined>('');
+interface LocationProps {
+  setLocation: (location: string | undefined) => void;
+}
+
+const Location = (props: LocationProps) => {
+
+  const { setLocation } = props;
+
+  const navigate = useNavigate();
+  const [address, setAddress] = useState<string | undefined>('');
   const [error, setError] = useState<string | undefined>('');
-  const {mutateAsync: getRestaurants} = useGetRestaurants();
 
   const handleSubmit = async (address: string | undefined) => {
     try {
@@ -15,17 +20,9 @@ const Location = () => {
       if (!address) {
         setError('Please Enter an Address.');
       }
-      //run post request to backend for address search
-      /*
-      PSUEDO CODE!!!!!!
-      const response = await googleMapsFunction(address);
-      if (response) setRestaurants(response);
-      */
-      //navigate to wheel page
+      setLocation(address);
       setError('');
-      // navigate('/wheel');
-      const restaurants = await getRestaurants({term: 'tacos', location: 'ridgewood, ny'});
-      console.log(restaurants)
+      navigate('/wheel');
     } catch (error) {
       console.log(error)
       setError(error as string);
@@ -38,11 +35,11 @@ const Location = () => {
         <input
           className='LocationInput'
           placeholder='Delivery Address'
-          onChange={(e) => setLocation(e.target.value)}
+          onChange={(e) => setAddress(e.target.value)}
         />
         <button
           className='LocationButton'
-          onClick={() => handleSubmit(location)}
+          onClick={() => handleSubmit(address)}
         >
           Submit
         </button>
