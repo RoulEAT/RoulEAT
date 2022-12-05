@@ -2,11 +2,18 @@ import React, { useState } from 'react';
 import { GetRestaurantResponse, useGetRestaurants } from '../../API/useGetRestaurants';
 import './styles.css';
 
-const Wheel = () => {
+interface WheelProps {
+  location?: string
+}
+
+const Wheel = (props: WheelProps) => {
+
+  const { location } = props;
 
   const { mutateAsync: getRestaurants } = useGetRestaurants();
   const [selectedItemIdx, setSelectedItemIdx] = useState<number | null>(null);
   const [restaurants, setRestaurants] = useState<GetRestaurantResponse[] | null>(null);
+  //restaurants to be passed into modal component
   const [items, setItems] = useState<string[]>([
     'Pizza',
     'Burger',
@@ -23,7 +30,7 @@ const Wheel = () => {
       const selectedItem = items[randomIdx];
       const restaurants = await getRestaurants({
         term: selectedItem,
-        location: 'ridgewood, ny',
+        location: location || 'New York, NY',
       });
       setRestaurants(restaurants);
       console.log(restaurants);

@@ -3,7 +3,14 @@ import Location from './Location';
 import Logo from './Logo';
 import './styles.css';
 
-const LandingPage = () => {
+interface LandingPageProps {
+  setLocation: (location: string | undefined) => void;
+}
+
+const LandingPage = (props: LandingPageProps) => {
+
+  const { setLocation } = props;
+
   return (
     <div className='LandingPage'>
       <Logo />
@@ -18,7 +25,7 @@ const LandingPage = () => {
         >
           YERRRRR SPIN THAT WHEEL FAM
         </h1>
-        <Location />
+        <Location setLocation={setLocation}/>
       </div>
     </div>
   );
