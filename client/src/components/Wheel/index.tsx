@@ -14,7 +14,7 @@ const Wheel = (props: WheelProps) => {
   const navigate = useNavigate();
 
   const { mutateAsync: getRestaurants } = useGetRestaurants();
-  const [selectedItemIdx, setSelectedItemIdx] = useState<number | null>(null);
+  const [selectedItemIndex, setSelectedItemIndex] = useState<number | null>(null);
   const [restaurants, setRestaurants] = useState<GetRestaurantResponse[] | null>(null);
   //restaurants to be passed into modal component
   const [items, setItems] = useState<string[]>([
@@ -33,10 +33,10 @@ const Wheel = (props: WheelProps) => {
   }, [location, navigate])
 
   const selectItem = async () => {
-    if (selectedItemIdx === null) {
-      const randomIdx = Math.floor(Math.random() * items.length);
-      setSelectedItemIdx(randomIdx);
-      const selectedItem = items[randomIdx];
+    if (selectedItemIndex === null) {
+      const randomIndex = Math.floor(Math.random() * items.length);
+      setSelectedItemIndex(randomIndex);
+      const selectedItem = items[randomIndex];
       const restaurants = await getRestaurants({
         term: selectedItem,
         location: location || 'New York, NY',
@@ -45,16 +45,16 @@ const Wheel = (props: WheelProps) => {
       console.log(restaurants);
       //this functionalitiy might be the only one necessary as when we close the modal we can then reset the state of this component back to null thus losing that weird reseetting visual
     } else {
-      setSelectedItemIdx(null);
+      setSelectedItemIndex(null);
       //leaving this else block so that the wheel resets properly during testing
     }
   }
 
-  const spinning = selectedItemIdx !== null ? 'spinning' : '';
+  const spinning = selectedItemIndex !== null ? 'spinning' : '';
 
   const wheelVars = {
     '--nb-item': items.length,
-    '--selected-item': selectedItemIdx,
+    '--selected-item': selectedItemIndex,
   } as React.CSSProperties;
 
   return (
