@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { GetRestaurantResponse, useGetRestaurants } from '../../API/useGetRestaurants';
 import './styles.css';
 
 const Wheel = () => {
 
+  const { mutateAsync: getRestaurants } = useGetRestaurants();
   const [selectedItemIdx, setSelectedItemIdx] = useState<number | null>(null);
-  const [foodCategory, setFoodCategory] = useState<string | null>(null);
+  const [restaurants, setRestaurants] = useState<GetRestaurantResponse[] | null>(null);
   const [items, setItems] = useState<string[]>([
     'Pizza',
     'Burger',
@@ -14,15 +16,21 @@ const Wheel = () => {
     'Tacos',
   ]);
 
-  const selectItem = () => {
+  const selectItem = async () => {
     if (selectedItemIdx === null) {
       const randomIdx = Math.floor(Math.random() * items.length);
       setSelectedItemIdx(randomIdx);
       const selectedItem = items[randomIdx];
-      setFoodCategory(selectedItem);
+      const restaurants = await getRestaurants({
+        term: selectedItem,
+        location: 'ridgewood, ny',
+      });
+      setRestaurants(restaurants);
+      console.log(restaurants);
       //this functionalitiy might be the only one necessary as when we close the modal we can then reset the state of this component back to null thus losing that weird reseetting visual
     } else {
       setSelectedItemIdx(null);
+      //leaving this else block so that the wheel resets properly during testing
     }
   }
 
