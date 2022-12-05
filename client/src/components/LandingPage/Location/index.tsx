@@ -21,13 +21,6 @@ const Location = (props: LocationProps) => {
         setError('Please Enter an Address.');
       }
       setLocation(address);
-      //run post request to backend for address search
-      /*
-      PSUEDO CODE!!!!!!
-      const response = await googleMapsFunction(address);
-      if (response) setRestaurants(response);
-      */
-      //navigate to wheel page
       setError('');
       navigate('/wheel');
     } catch (error) {

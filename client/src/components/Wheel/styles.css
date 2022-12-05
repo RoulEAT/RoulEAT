@@ -14,7 +14,6 @@
   --reset-duration: 0.25s;
 }
 
-/* Conteneur de la roue = cercle rose extérieur */
 .wheel-container {
   display: block;
   position: relative;
