@@ -1,7 +1,7 @@
 :root {
   --wheel-font: 'Lato', 'Quicksand', sans-serif;
-  --wheel-size: 400px;
-  --wheel-slice-spacing: 50px;
+  --wheel-size: 600px;
+  --wheel-slice-spacing: 70px;
   --wheel-border-size: 5px;
   --wheel-color: #da3768;
   --neutral-color: white;

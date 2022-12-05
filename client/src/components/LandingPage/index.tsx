@@ -15,16 +15,6 @@ const LandingPage = (props: LandingPageProps) => {
     <div className='LandingPage'>
       <Logo />
       <div className='Container'>
-        <h1
-          style={{
-            color: 'white   ',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        >
-          YERRRRR SPIN THAT WHEEL FAM
-        </h1>
         <Location setLocation={setLocation}/>
       </div>
     </div>
