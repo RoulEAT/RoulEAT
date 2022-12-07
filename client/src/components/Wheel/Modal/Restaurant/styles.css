@@ -1,6 +1,4 @@
 .RestaurantContainer {
-  /* background-color: var(--eggplant); */
-  /* background-image: url("https://www.aworldofawnings.com/wp-content/uploads/2015/12/100_1855-1024x576.jpg"); */
   background: linear-gradient(to top, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url('https://www.aworldofawnings.com/wp-content/uploads/2015/12/100_1855-1024x576.jpg');
   background-size: 100% 100%;
   width: 100%;
