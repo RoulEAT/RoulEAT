@@ -12,22 +12,35 @@ const Restaurant = () => {
         <hr />
         <div className='RestaurantInfo'>
           <div className='RestaurantInfo-Left'>
-            <h4 className='RestaurantServices'>
+            <h3 className='RestaurantServices'>
               Services (delivery, pickup, etc)
-            </h4>
-            <h4 className='RestaurantPhone'>Phone Number</h4>
-            <h4 className='RestaurantRating'>Rating</h4>
-            <h4 className='RestaurantPrice'>Price</h4>
+            </h3>
+            <h3 className='RestaurantPhone'>Phone Number</h3>
+            <h3 className='RestaurantPrice'>Price</h3>
           </div>
           <div className='RestaurantInfo-Right'>
-            {/* <img
-              className='RestaurantImage'
-              src='https://www.aworldofawnings.com/wp-content/uploads/2015/12/100_1855-1024x576.jpg'
-              alt='meaning full text'
-            /> */}
+            <h3 className='RestaurantRating'>Rating</h3>
             <h3 className='RestaurantDistance'>Distance</h3>
           </div>
         </div>
+      <div className='RestaurantRating'>
+        <img
+          src='https://www.freepnglogos.com/uploads/star-png/star-vector-png-transparent-image-pngpix-21.png'
+          alt='meaningful text about blind guys lololololoooololololololl cause theyre blind'
+        />
+        <img
+          src='https://www.freepnglogos.com/uploads/star-png/star-vector-png-transparent-image-pngpix-21.png'
+          alt='meaningful text about blind guys lololololoooololololololl cause theyre blind'
+        />
+        <img
+          src='https://www.freepnglogos.com/uploads/star-png/star-vector-png-transparent-image-pngpix-21.png'
+          alt='meaningful text about blind guys lololololoooololololololl cause theyre blind'
+        />
+        <img
+          src='https://www.freepnglogos.com/uploads/star-png/star-vector-png-transparent-image-pngpix-21.png'
+          alt='meaningful text about blind guys lololololoooololololololl cause theyre blind'
+        />
+      </div>
       </div>
     </div>
   );
