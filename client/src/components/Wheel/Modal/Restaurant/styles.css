@@ -26,6 +26,11 @@
   margin-top: 10px;
 }
 
+hr {
+  width: 90%;
+  border: 1px solid var(--snow);
+}
+
 .RestaurantInfo {
   display: flex;
   flex-direction: row;

@@ -9,6 +9,7 @@ const Restaurant = () => {
           <h1 className='RestaurantName'>Restaurant Name</h1>
           <h2 className='RestaurantAddress'>Restaurant Address</h2>
         </div>
+        <hr />
         <div className='RestaurantInfo'>
           <div className='RestaurantInfo-Left'>
             <h4 className='RestaurantServices'>
