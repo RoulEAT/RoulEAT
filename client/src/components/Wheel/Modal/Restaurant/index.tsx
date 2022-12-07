@@ -20,11 +20,11 @@ const Restaurant = () => {
             <h4 className='RestaurantPrice'>Price</h4>
           </div>
           <div className='RestaurantInfo-Right'>
-            <img
+            {/* <img
               className='RestaurantImage'
-              src='https://img.washingtonpost.com/rf/image_1484w/2010-2019/WashingtonPost/2012/12/12/Production/Weekend/Images/wk-hobbit1214-7.jpg?uuid=74SgvEQBEeKOcOGZNSgiLQ'
+              src='https://www.aworldofawnings.com/wp-content/uploads/2015/12/100_1855-1024x576.jpg'
               alt='meaning full text'
-            />
+            /> */}
             <h3 className='RestaurantDistance'>Distance</h3>
           </div>
         </div>
