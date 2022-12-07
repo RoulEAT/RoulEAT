@@ -1,21 +1,28 @@
 import React, { useEffect, useState } from 'react';
-import { GetRestaurantResponse, useGetRestaurants } from '../../API/useGetRestaurants';
+import {
+  GetRestaurantResponse,
+  useGetRestaurants,
+} from '../../API/useGetRestaurants';
 import { useNavigate } from 'react-router-dom';
 import './styles.css';
+import Modal from './Modal/index';
 
 interface WheelProps {
-  location?: string
+  location?: string;
 }
 
 const Wheel = (props: WheelProps) => {
-
   const { location } = props;
 
   const navigate = useNavigate();
 
   const { mutateAsync: getRestaurants } = useGetRestaurants();
-  const [selectedItemIndex, setSelectedItemIndex] = useState<number | null>(null);
-  const [restaurants, setRestaurants] = useState<GetRestaurantResponse[] | null>(null);
+  const [selectedItemIndex, setSelectedItemIndex] = useState<number | null>(
+    null
+  );
+  const [restaurants, setRestaurants] = useState<
+    GetRestaurantResponse[] | null
+  >(null);
   //restaurants to be passed into modal component
   const [items, setItems] = useState<string[]>([
     'Pizza',
@@ -30,7 +37,7 @@ const Wheel = (props: WheelProps) => {
     if (!location) {
       navigate('/');
     }
-  }, [location, navigate])
+  }, [location, navigate]);
 
   const selectItem = async () => {
     try {
@@ -53,7 +60,7 @@ const Wheel = (props: WheelProps) => {
       navigate('/');
       //error handling in the case nothing is returned from the API
     }
-  }
+  };
 
   const spinning = selectedItemIndex !== null ? 'spinning' : '';
 
@@ -63,18 +70,25 @@ const Wheel = (props: WheelProps) => {
   } as React.CSSProperties;
 
   return (
-    <div className='wheel-container'>
-      <div className={`wheel ${spinning}`} style={wheelVars} onClick={selectItem}>
-        {items.map((item, index) => (
-          <div
-            className='wheel-item'
-            key={index}
-            style={{ '--item-nb': index } as React.CSSProperties}
-          >
-            {item}
-          </div>
-        ))}
+    <div className='Wheel'>
+      <div className='wheel-container'>
+        <div
+          className={`wheel ${spinning}`}
+          style={wheelVars}
+          onClick={selectItem}
+        >
+          {items.map((item, index) => (
+            <div
+              className='wheel-item'
+              key={index}
+              style={{ '--item-nb': index } as React.CSSProperties}
+            >
+              {item}
+            </div>
+          ))}
+        </div>
       </div>
+      <Modal />
     </div>
   );
 };

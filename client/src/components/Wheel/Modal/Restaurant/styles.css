@@ -1,0 +1,50 @@
+.RestaurantContainer {
+  background-color: var(--eggplant);
+  width: 100%;
+  min-height: 40%;
+  max-height: 40%;
+  border-radius: 1rem;
+  margin: auto;
+}
+
+.Restaurant {
+  gap: 10px;
+  /* margin: 0.5rem; */
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  color: var(--snow);
+}
+
+.RestaurantName {
+  text-align: justify;
+  justify-self: start;
+  margin: 0 auto;
+}
+
+.RestaurantAddress {
+  margin: 0 auto;
+}
+
+.RestaurantDistance {
+  margin: 0 auto;
+}
+
+.RestaurantServices {
+  margin: 0 auto;
+}
+
+.RestaurantPhone {
+  margin: 0 auto;
+}
+
+.RestaurantRating {
+  margin: 0 auto;
+}
+
+.RestaurantPrice {
+  margin: 0 auto;
+}
