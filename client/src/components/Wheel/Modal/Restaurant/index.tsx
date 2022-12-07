@@ -5,14 +5,41 @@ const Restaurant = () => {
   return (
     <div className='RestaurantContainer'>
       <div className='Restaurant'>
-        <h1 className='RestaurantName'>Restaurant Name</h1>
-        {/* Restaurant Image Top Right */}
-        <h2 className='RestaurantAddress'>Restaurant Address</h2>
-        <h3 className='RestaurantDistance'>Distance</h3>
-        <h4 className='RestaurantServices'>Services (delivery, pickup, etc)</h4>
-        <h4 className='RestaurantPhone'>Phone Number</h4>
-        <h5 className='RestaurantRating'>Rating</h5>
-        <h5 className='RestaurantPrice'>Price</h5>
+        <div className='RestaurantHeader'>
+          <h1 className='RestaurantName'>Restaurant Name</h1>
+          <h2 className='RestaurantAddress'>Restaurant Address</h2>
+        </div>
+        <hr />
+        <div className='RestaurantInfo'>
+          <div className='RestaurantInfo-Left'>
+            <h3 className='RestaurantPhone'>Phone Number</h3>
+            <h3 className='RestaurantPrice'>Price</h3>
+          </div>
+          <div className='RestaurantInfo-Right'>
+            <h3 className='RestaurantDistance'>Distance</h3>
+            <h3 className='RestaurantServices'>
+              Services (delivery, pickup, etc)
+            </h3>
+          </div>
+        </div>
+      <div className='RestaurantRating'>
+        <img
+          src='https://www.freepnglogos.com/uploads/star-png/star-vector-png-transparent-image-pngpix-21.png'
+          alt='meaningful text about blind guys lololololoooololololololl cause theyre blind'
+        />
+        <img
+          src='https://www.freepnglogos.com/uploads/star-png/star-vector-png-transparent-image-pngpix-21.png'
+          alt='meaningful text about blind guys lololololoooololololololl cause theyre blind'
+        />
+        <img
+          src='https://www.freepnglogos.com/uploads/star-png/star-vector-png-transparent-image-pngpix-21.png'
+          alt='meaningful text about blind guys lololololoooololololololl cause theyre blind'
+        />
+        <img
+          src='https://www.freepnglogos.com/uploads/star-png/star-vector-png-transparent-image-pngpix-21.png'
+          alt='meaningful text about blind guys lololololoooololololololl cause theyre blind'
+        />
+      </div>
       </div>
     </div>
   );

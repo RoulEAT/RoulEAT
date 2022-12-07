@@ -1,5 +1,6 @@
 .RestaurantContainer {
-  background-color: var(--eggplant);
+  background: linear-gradient(to top, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url('https://www.aworldofawnings.com/wp-content/uploads/2015/12/100_1855-1024x576.jpg');
+  background-size: 100% 100%;
   width: 100%;
   min-height: 40%;
   max-height: 40%;
@@ -9,19 +10,56 @@
 
 .Restaurant {
   gap: 10px;
-  /* margin: 0.5rem; */
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   flex-direction: column;
   height: 100%;
   width: 100%;
   color: var(--snow);
+  text-shadow: 1px 1px black;
+}
+
+.RestaurantHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+hr {
+  width: 90%;
+  border: 1px solid var(--snow);
+}
+
+.RestaurantInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.RestaurantInfo-Left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+  margin-left: 10px;
+  gap: 5px;
+}
+
+.RestaurantInfo-Right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 50%;
+  margin-right: 10px;
+  gap: 15px;
 }
 
 .RestaurantName {
-  text-align: justify;
-  justify-self: start;
   margin: 0 auto;
 }
 
@@ -29,22 +67,25 @@
   margin: 0 auto;
 }
 
-.RestaurantDistance {
-  margin: 0 auto;
+.RestaurantRating {
+  display: flex;
+  flex-direction: row;
+}
+
+.RestaurantRating > img {
+  width: 50px;
+  height: 50px;
+  filter: drop-shadow(0 0 0.75rem black);
 }
 
 .RestaurantServices {
-  margin: 0 auto;
+  margin-top: 0;
 }
 
 .RestaurantPhone {
-  margin: 0 auto;
-}
-
-.RestaurantRating {
-  margin: 0 auto;
+  margin-top: 0;
 }
 
 .RestaurantPrice {
-  margin: 0 auto;
+  margin-top: 0;
 }
