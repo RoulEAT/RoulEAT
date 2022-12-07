@@ -12,15 +12,14 @@ const Restaurant = () => {
         <hr />
         <div className='RestaurantInfo'>
           <div className='RestaurantInfo-Left'>
-            <h3 className='RestaurantServices'>
-              Services (delivery, pickup, etc)
-            </h3>
             <h3 className='RestaurantPhone'>Phone Number</h3>
             <h3 className='RestaurantPrice'>Price</h3>
           </div>
           <div className='RestaurantInfo-Right'>
-            <h3 className='RestaurantRating'>Rating</h3>
             <h3 className='RestaurantDistance'>Distance</h3>
+            <h3 className='RestaurantServices'>
+              Services (delivery, pickup, etc)
+            </h3>
           </div>
         </div>
       <div className='RestaurantRating'>
