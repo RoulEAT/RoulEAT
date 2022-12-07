@@ -9,9 +9,7 @@
 
 .Restaurant {
   gap: 10px;
-  /* margin: 0.5rem; */
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   flex-direction: column;
   height: 100%;
@@ -19,9 +17,47 @@
   color: var(--snow);
 }
 
+.RestaurantHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.RestaurantInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.RestaurantInfo-Left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+  margin-left: 10px;
+  gap: 5px;
+}
+
+.RestaurantInfo-Right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 50%;
+  margin-right: 10px;
+  gap: 15px;
+}
+
+.RestaurantInfo-Right > img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
 .RestaurantName {
-  text-align: justify;
-  justify-self: start;
   margin: 0 auto;
 }
 
@@ -34,17 +70,17 @@
 }
 
 .RestaurantServices {
-  margin: 0 auto;
+  margin-top: 0;
 }
 
 .RestaurantPhone {
-  margin: 0 auto;
+  margin-top: 0;
 }
 
 .RestaurantRating {
-  margin: 0 auto;
+  margin-top: 0;
 }
 
 .RestaurantPrice {
-  margin: 0 auto;
+  margin-top: 0;
 }

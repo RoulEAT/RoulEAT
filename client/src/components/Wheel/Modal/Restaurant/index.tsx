@@ -5,14 +5,28 @@ const Restaurant = () => {
   return (
     <div className='RestaurantContainer'>
       <div className='Restaurant'>
-        <h1 className='RestaurantName'>Restaurant Name</h1>
-        {/* Restaurant Image Top Right */}
-        <h2 className='RestaurantAddress'>Restaurant Address</h2>
-        <h3 className='RestaurantDistance'>Distance</h3>
-        <h4 className='RestaurantServices'>Services (delivery, pickup, etc)</h4>
-        <h4 className='RestaurantPhone'>Phone Number</h4>
-        <h5 className='RestaurantRating'>Rating</h5>
-        <h5 className='RestaurantPrice'>Price</h5>
+        <div className='RestaurantHeader'>
+          <h1 className='RestaurantName'>Restaurant Name</h1>
+          <h2 className='RestaurantAddress'>Restaurant Address</h2>
+        </div>
+        <div className='RestaurantInfo'>
+          <div className='RestaurantInfo-Left'>
+            <h4 className='RestaurantServices'>
+              Services (delivery, pickup, etc)
+            </h4>
+            <h4 className='RestaurantPhone'>Phone Number</h4>
+            <h4 className='RestaurantRating'>Rating</h4>
+            <h4 className='RestaurantPrice'>Price</h4>
+          </div>
+          <div className='RestaurantInfo-Right'>
+            <img
+              className='RestaurantImage'
+              src='https://img.washingtonpost.com/rf/image_1484w/2010-2019/WashingtonPost/2012/12/12/Production/Weekend/Images/wk-hobbit1214-7.jpg?uuid=74SgvEQBEeKOcOGZNSgiLQ'
+              alt='meaning full text'
+            />
+            <h3 className='RestaurantDistance'>Distance</h3>
+          </div>
+        </div>
       </div>
     </div>
   );

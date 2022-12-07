@@ -33,11 +33,11 @@ const Wheel = (props: WheelProps) => {
     'Tacos',
   ]);
 
-  useEffect(() => {
-    if (!location) {
-      navigate('/');
-    }
-  }, [location, navigate]);
+  // useEffect(() => {
+  //   if (!location) {
+  //     navigate('/');
+  //   }
+  // }, [location, navigate]);
 
   const selectItem = async () => {
     try {
