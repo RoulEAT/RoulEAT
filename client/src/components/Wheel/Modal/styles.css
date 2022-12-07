@@ -1,0 +1,43 @@
+.ModalContainer {
+  /* margin: 100px 200px; */
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  /* opacity: 0.5; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation: fadein 0.3s;
+  -moz-animation: fadein 0.3s;
+  -ms-animation: fadein 0.3s;
+  animation: fadein 0.3s;
+}
+
+.Modal {
+  height: 90%;
+  width: 40%;
+  background-color: var(--fire);
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  gap: 0.5rem;
+  box-shadow: 0 0 1rem 0 var(--snow);
+  overflow-y: scroll;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
