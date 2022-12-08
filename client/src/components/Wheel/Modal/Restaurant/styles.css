@@ -23,11 +23,6 @@
   gap: 20px;
 }
 
-.RestaurantInfo > h3 {
-  margin: 0;
-  padding: 0;
-}
-
 .RestaurantImage {
   display: flex;
   align-items: center;
