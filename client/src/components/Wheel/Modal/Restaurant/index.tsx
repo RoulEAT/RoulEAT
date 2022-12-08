@@ -3,43 +3,37 @@ import './styles.css';
 
 const Restaurant = () => {
   return (
-    <div className='RestaurantContainer'>
-      <div className='Restaurant'>
-        <div className='RestaurantHeader'>
-          <h1 className='RestaurantName'>Restaurant Name</h1>
-          <h2 className='RestaurantAddress'>Restaurant Address</h2>
-        </div>
-        <hr />
-        <div className='RestaurantInfo'>
-          <div className='RestaurantInfo-Left'>
-            <h3 className='RestaurantPhone'>Phone Number</h3>
-            <h3 className='RestaurantPrice'>Price</h3>
-          </div>
-          <div className='RestaurantInfo-Right'>
-            <h3 className='RestaurantDistance'>Distance</h3>
-            <h3 className='RestaurantServices'>
-              Services (delivery, pickup, etc)
-            </h3>
-          </div>
-        </div>
+    <div className='Restaurant'>
+      <div className='RestaurantInfo'>
+        <h1>Restaurant Name</h1>
+        <h2>Address</h2>
+        <h3>∆: Distance</h3>
+        <h3>∆: 2893729372</h3>
+        <h3>∆: Availability</h3>
       <div className='RestaurantRating'>
         <img
           src='https://www.freepnglogos.com/uploads/star-png/star-vector-png-transparent-image-pngpix-21.png'
-          alt='meaningful text about blind guys lololololoooololololololl cause theyre blind'
+          alt='meaningful text'
         />
         <img
           src='https://www.freepnglogos.com/uploads/star-png/star-vector-png-transparent-image-pngpix-21.png'
-          alt='meaningful text about blind guys lololololoooololololololl cause theyre blind'
+          alt='meaningful text'
         />
         <img
           src='https://www.freepnglogos.com/uploads/star-png/star-vector-png-transparent-image-pngpix-21.png'
-          alt='meaningful text about blind guys lololololoooololololololl cause theyre blind'
+          alt='meaningful text'
         />
         <img
           src='https://www.freepnglogos.com/uploads/star-png/star-vector-png-transparent-image-pngpix-21.png'
-          alt='meaningful text about blind guys lololololoooololololololl cause theyre blind'
+          alt='meaningful text'
         />
       </div>
+      </div>
+      <div className='RestaurantImage'>
+        <img
+          src='https://www.aworldofawnings.com/wp-content/uploads/2015/12/100_1855-1024x576.jpg'
+          alt='meaningful text about blind guys lololololoooololololololl cause theyre blind'
+        />
       </div>
     </div>
   );
