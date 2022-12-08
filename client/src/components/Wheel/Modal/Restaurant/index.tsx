@@ -2,13 +2,13 @@ import React from 'react';
 import './styles.css';
 import { GetRestaurantResponse } from '../../../../API/useGetRestaurants';
 import { GiPathDistance } from 'react-icons/gi';
-import { MdLocationOn } from 'react-icons/md';
 import {
   AiFillPhone,
   AiFillCheckCircle,
   AiFillCloseCircle,
 } from 'react-icons/ai';
 import { FaDollarSign } from 'react-icons/fa';
+import RestaurantHeader from './RestaurantHeader';
 
 interface RestaurantProps {
   restaurant: GetRestaurantResponse;
@@ -20,10 +20,10 @@ const Restaurant = (props: RestaurantProps) => {
   return (
     <div className='Restaurant'>
       <div className='RestaurantInfo'>
-        <h1>{restaurant.name}</h1>
-        <h2>
-          <MdLocationOn /> {restaurant.location.address1}
-        </h2>
+        <RestaurantHeader
+          restaurantName={restaurant.name}
+          restaurantAddress={restaurant.location.address1}
+        />
         <h3>
           <GiPathDistance /> {restaurant.distance} Miles
         </h3>
@@ -51,7 +51,7 @@ const Restaurant = (props: RestaurantProps) => {
         {restaurant.price && (
           <h3>
             {Array.from({ length: restaurant.price.length }).map((_, index) => (
-              <FaDollarSign />
+              <FaDollarSign key={index} />
             ))}
           </h3>
         )}
