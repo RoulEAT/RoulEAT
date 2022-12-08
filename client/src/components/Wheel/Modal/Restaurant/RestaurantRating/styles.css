@@ -7,6 +7,7 @@
   margin-top: 50px;
   position: absolute;
   bottom: 0;
+  align-self: center;
 }
 
 .RestaurantRating > img {
