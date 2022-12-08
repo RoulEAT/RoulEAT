@@ -5,7 +5,6 @@ import { GiPathDistance } from 'react-icons/gi';
 import {
   AiFillPhone,
 } from 'react-icons/ai';
-import { FaDollarSign } from 'react-icons/fa';
 import RestaurantHeader from './RestaurantHeader';
 import RestaurantInfoLine from './RestaurantInfoLine';
 import RestaurantAvailability from './RestaurantAvailability';
@@ -38,7 +37,7 @@ const Restaurant = (props: RestaurantProps) => {
       <div className='RestaurantImage'>
         <img
           src={restaurant.image}
-          alt='meaningful text about blind guys lololololoooololololololl cause theyre blind'
+          alt='meaningful text'
         />
       </div>
     </div>
