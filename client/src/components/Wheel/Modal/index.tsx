@@ -1,15 +1,21 @@
 import React from 'react';
 import './styles.css';
 import Restaurant from './Restaurant/index';
+import { GetRestaurantResponse } from '../../../API/useGetRestaurants';
 
-const Modal = () => {
+interface ModalProps {
+  restaurants: GetRestaurantResponse[];
+}
+
+const Modal = (props: ModalProps) => {
+  const { restaurants } = props;
+
   return (
     <div className='ModalContainer'>
       <div className='Modal'>
-        <Restaurant />
-        <Restaurant />
-        <Restaurant />
-        <Restaurant />
+        {restaurants.map((restaurant) => (
+          <Restaurant restaurant={restaurant} key={restaurant.id} />
+        ))}
       </div>
     </div>
   );
