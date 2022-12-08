@@ -7,9 +7,27 @@ const Restaurant = () => {
       <div className='RestaurantInfo'>
         <h1>Restaurant Name</h1>
         <h2>Address</h2>
-        <h3>Distance</h3>
-        <h3>2893729372</h3>
-        <h3>Availability</h3>
+        <h3>∆: Distance</h3>
+        <h3>∆: 2893729372</h3>
+        <h3>∆: Availability</h3>
+      <div className='RestaurantRating'>
+        <img
+          src='https://www.freepnglogos.com/uploads/star-png/star-vector-png-transparent-image-pngpix-21.png'
+          alt='meaningful text'
+        />
+        <img
+          src='https://www.freepnglogos.com/uploads/star-png/star-vector-png-transparent-image-pngpix-21.png'
+          alt='meaningful text'
+        />
+        <img
+          src='https://www.freepnglogos.com/uploads/star-png/star-vector-png-transparent-image-pngpix-21.png'
+          alt='meaningful text'
+        />
+        <img
+          src='https://www.freepnglogos.com/uploads/star-png/star-vector-png-transparent-image-pngpix-21.png'
+          alt='meaningful text'
+        />
+      </div>
       </div>
       <div className='RestaurantImage'>
         <img
