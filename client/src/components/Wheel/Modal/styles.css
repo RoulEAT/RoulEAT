@@ -33,6 +33,11 @@
   box-shadow: 0 0 1rem 0 var(--snow);
   overflow: auto;
 }
+
+.Modal::-webkit-scrollbar {
+  display: none;
+}
+
 @keyframes fadein {
   from {
     opacity: 0;
