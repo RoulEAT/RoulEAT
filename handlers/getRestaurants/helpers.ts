@@ -20,7 +20,7 @@ export interface YelpResponse {
 
 const getMiles = (meters: number): number => {
   return Number((meters * 0.000621371192).toFixed(2));
-}
+};
 
 export const getSortedRestaurants = (restaurants: any): YelpResponse[] => {
   const typedRestaurants = restaurants.map((restaurant: any) => {
@@ -36,7 +36,7 @@ export const getSortedRestaurants = (restaurants: any): YelpResponse[] => {
         address2: restaurant.location.address2,
         zip_code: restaurant.location.zip_code,
       },
-      image: restaurant.image,
+      image: restaurant.image_url,
       phone: restaurant.phone,
       transactions: restaurant.transactions,
       distance: getMiles(restaurant.distance),
@@ -53,5 +53,3 @@ export const getSortedRestaurants = (restaurants: any): YelpResponse[] => {
       Number(a.distance) - Number(b.distance)
   );
 };
-
-

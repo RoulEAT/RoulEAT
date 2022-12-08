@@ -1,37 +1,75 @@
 import React from 'react';
 import './styles.css';
+import { GetRestaurantResponse } from '../../../../API/useGetRestaurants';
+import { GiPathDistance } from 'react-icons/gi';
+import { MdLocationOn } from 'react-icons/md';
+import {
+  AiFillPhone,
+  AiFillCheckCircle,
+  AiFillCloseCircle,
+} from 'react-icons/ai';
+import { FaDollarSign } from 'react-icons/fa';
 
-const Restaurant = () => {
+interface RestaurantProps {
+  restaurant: GetRestaurantResponse;
+}
+
+const Restaurant = (props: RestaurantProps) => {
+  const { restaurant } = props;
+
   return (
     <div className='Restaurant'>
       <div className='RestaurantInfo'>
-        <h1>Restaurant Name</h1>
-        <h2>Address</h2>
-        <h3>∆: Distance</h3>
-        <h3>∆: 2893729372</h3>
-        <h3>∆: Availability</h3>
-      <div className='RestaurantRating'>
-        <img
-          src='https://www.freepnglogos.com/uploads/star-png/star-vector-png-transparent-image-pngpix-21.png'
-          alt='meaningful text'
-        />
-        <img
-          src='https://www.freepnglogos.com/uploads/star-png/star-vector-png-transparent-image-pngpix-21.png'
-          alt='meaningful text'
-        />
-        <img
-          src='https://www.freepnglogos.com/uploads/star-png/star-vector-png-transparent-image-pngpix-21.png'
-          alt='meaningful text'
-        />
-        <img
-          src='https://www.freepnglogos.com/uploads/star-png/star-vector-png-transparent-image-pngpix-21.png'
-          alt='meaningful text'
-        />
-      </div>
+        <h1>{restaurant.name}</h1>
+        <h2>
+          <MdLocationOn /> {restaurant.location.address1}
+        </h2>
+        <h3>
+          <GiPathDistance /> {restaurant.distance} Miles
+        </h3>
+        <h3>
+          <AiFillPhone /> {restaurant.phone}
+        </h3>
+        <>
+          <h3>
+            {restaurant.transactions.includes('pickup') ? (
+              <AiFillCheckCircle />
+            ) : (
+              <AiFillCloseCircle />
+            )}{' '}
+            Pickup
+          </h3>
+          <h3>
+            {restaurant.transactions.includes('delivery') ? (
+              <AiFillCheckCircle />
+            ) : (
+              <AiFillCloseCircle />
+            )}{' '}
+            Delivery
+          </h3>
+        </>
+        {restaurant.price && (
+          <h3>
+            {Array.from({ length: restaurant.price.length }).map((_, index) => (
+              <FaDollarSign />
+            ))}
+          </h3>
+        )}
+        <div className='RestaurantRating'>
+          {Array.from({ length: Math.ceil(restaurant.rating) }).map(
+            (_, index) => (
+              <img
+                src='https://www.freepnglogos.com/uploads/star-png/star-vector-png-transparent-image-pngpix-21.png'
+                alt='meaningful text'
+                key={index}
+              />
+            )
+          )}
+        </div>
       </div>
       <div className='RestaurantImage'>
         <img
-          src='https://www.aworldofawnings.com/wp-content/uploads/2015/12/100_1855-1024x576.jpg'
+          src={restaurant.image}
           alt='meaningful text about blind guys lololololoooololololololl cause theyre blind'
         />
       </div>

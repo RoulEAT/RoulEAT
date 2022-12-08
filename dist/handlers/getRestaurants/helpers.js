@@ -18,7 +18,7 @@ const getSortedRestaurants = (restaurants) => {
                 address2: restaurant.location.address2,
                 zip_code: restaurant.location.zip_code,
             },
-            image: restaurant.image,
+            image: restaurant.image_url,
             phone: restaurant.phone,
             transactions: restaurant.transactions,
             distance: getMiles(restaurant.distance),
