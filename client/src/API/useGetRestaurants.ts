@@ -1,5 +1,5 @@
 import {useMutation} from 'react-query'
-import { RoulEatApi } from './RealEatApi'
+import { RoulEatApi } from './RoulEatApi'
 
 interface GetRestaurantParams {
   term: string
