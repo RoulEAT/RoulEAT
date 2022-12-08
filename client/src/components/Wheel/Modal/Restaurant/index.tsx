@@ -9,6 +9,8 @@ import { FaDollarSign } from 'react-icons/fa';
 import RestaurantHeader from './RestaurantHeader';
 import RestaurantInfoLine from './RestaurantInfoLine';
 import RestaurantAvailability from './RestaurantAvailability';
+import RestaurantPrice from './RestaurantPrice';
+import RestaurantRating from './RestaurantRating';
 
 interface RestaurantProps {
   restaurant: GetRestaurantResponse;
@@ -30,24 +32,8 @@ const Restaurant = (props: RestaurantProps) => {
         />
         <RestaurantInfoLine icon={<AiFillPhone />} info={restaurant.phone} />
         <RestaurantAvailability restaurantAvailability={restaurant.transactions} />
-        {restaurant.price && (
-          <h3>
-            {Array.from({ length: restaurant.price.length }).map((_, index) => (
-              <FaDollarSign key={index} />
-            ))}
-          </h3>
-        )}
-        <div className='RestaurantRating'>
-          {Array.from({ length: Math.ceil(restaurant.rating) }).map(
-            (_, index) => (
-              <img
-                src='https://www.freepnglogos.com/uploads/star-png/star-vector-png-transparent-image-pngpix-21.png'
-                alt='meaningful text'
-                key={index}
-              />
-            )
-          )}
-        </div>
+        <RestaurantPrice restaurantPrice={restaurant.price}/>
+        <RestaurantRating restaurantRating={restaurant.rating} />
       </div>
       <div className='RestaurantImage'>
         <img
