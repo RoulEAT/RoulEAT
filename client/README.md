@@ -1,46 +1,21 @@
-# Getting Started with Create React App
+# What is RoulEAT
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+RoulEAT is a webapp that allows users to randomly select a cuisine to eat, and provides them with matching options based off of their location. RoulEAT was created by Jeremy Cook and William Watson.
 
-## Available Scripts
+## What does it use?
 
-In the project directory, you can run:
+RoulEAT is built using React, TypeScript, Nodejs, React Icons and React Query. It also uses Yelps API to access restaurant information based on location.
 
-### `npm start`
+### How does it work?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Enter your location upon entering the site
+2. Spin the wheel
+3. Browse through the options based on the result
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### WEBSITE/PROJECT LINK STILL BEING WORKED ON
 
-### `npm test`
+The idea behind RoulEAT came from all the times people would not know what they wanted to eat, only what they didn't want. With RoulEAT, the only thing the user has to do is spin a wheel, and the rest is left up to chance.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### How to contact us
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Github and LinkedIn information will go here, and will also be on the site itself.
