@@ -2,7 +2,7 @@
 
 RoulEAT is a webapp that allows users to randomly select a cuisine to eat, and provides them with matching options based off of their location. RoulEAT was created by Jeremy Cook and William Watson.
 
-## What does it use?
+## Technologies
 
 RoulEAT is built using React, TypeScript, Nodejs, React Icons and React Query. It also uses Yelps API to access restaurant information based on location.
 
