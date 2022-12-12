@@ -34,9 +34,10 @@
 }
 
 .LocationButton:hover {
-  background-color: var(--snow);
+  background-color: var(--outrunPink);
   color: var(--forest);
   transition: 0.5s;
+  filter: drop-shadow(0 0 0.5rem var(--outrunPink));
 }
 
 .LocationError {
