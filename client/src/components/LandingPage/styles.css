@@ -9,7 +9,7 @@
 }
 
 .Container {
-  background-color: var(--fire);
+  background-color: var(--outrunBlue);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,5 +19,5 @@
   padding: 2rem;
   border-radius: 1rem;
   gap: 1rem;
-  box-shadow: 0 0 1rem 0 var(--snow);
+  box-shadow: 0 0 1rem 0 var(--outrunLaserPink);
 }

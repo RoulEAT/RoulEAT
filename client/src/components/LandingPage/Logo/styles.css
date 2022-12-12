@@ -1,0 +1,27 @@
+.LogoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+
+.WheelLogo img {
+  width: 100%;
+  height: 100%;
+}
+
+.RoulEatLogo {
+  position: relative;
+  bottom: 10rem;
+}
+
+.RoulEatLogo img {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 0 0.5rem var(--outrunCyan));
+}
+
+
