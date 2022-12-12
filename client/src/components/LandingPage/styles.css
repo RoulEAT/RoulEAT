@@ -9,7 +9,7 @@
 }
 
 .Container {
-  background-color: var(--outrunDarkerPurple);
+  background-color: var(--outrunDarkPurple);
   display: flex;
   flex-direction: column;
   justify-content: center;
