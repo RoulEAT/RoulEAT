@@ -44,3 +44,14 @@
   font-size: 1.2rem;
   text-align: center;
 }
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+  .LocationContainer {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .LocationInput {
+    width: 100%;
+  }
+}
