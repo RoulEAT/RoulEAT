@@ -9,7 +9,7 @@
 }
 
 .Container {
-  background-color: var(--outrunBlue);
+  background-color: var(--outrunDarkerPurple);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,7 +19,7 @@
   padding: 2rem;
   border-radius: 1rem;
   gap: 1rem;
-  box-shadow: 0 0 1rem 0 var(--outrunLaserPink);
+  box-shadow: 0 0 1rem 0 var(--outrunPink);
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px){
