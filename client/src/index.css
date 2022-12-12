@@ -4,6 +4,15 @@
   --snow: #efe9f4;
   --forest: #57a773;
   --eggplant: #484d6d;
+  --outrunOrange: #ff6c11;
+  --outrunRed: #ff3864;
+  --outrunCyan: #2de2e6;
+  --outrunBlue: #023788;
+  --outrunEggplant: #261447;
+  --outrunPurple: #541388;
+  --outrunDarkPurple: #0d0221;
+  --outrunPink: #f6019d;
+  --outrunLaserPink: #f706cf;
 }
 
 body {
