@@ -32,10 +32,10 @@
   padding: 3px;
   margin: auto;
   background-color: var(--snow);
-  border: solid var(--outrunOrange) 3px;
+  border: solid var(--outrunRed) 3px;
   border-radius: 50%;
   user-select: none;
-  filter: drop-shadow(0 0 0.5rem var(--outrunOrange));
+  filter: drop-shadow(0 0 0.7rem var(--outrunRed));
 }
 
 .wheel-container::before,
@@ -71,8 +71,8 @@
   height: var(--wheel-size);
   overflow: hidden;
   border-radius: 50%;
-  border: solid var(--outrunRed) var(--wheel-border-size);
-  background-color: var(--outrunRed);
+  border: solid var(--outrunOrange) var(--wheel-border-size);
+  background-color: var(--outrunOrange);
   transition: transform var(--reset-duration);
   transform: rotate(0deg);
   cursor: pointer;
@@ -114,7 +114,6 @@
   transform: translateY(-50%)
     rotate(calc(var(--item-nb) * (360deg / var(--nb-item, 1))));
 
-  /* color: var(--neutral-color); */
   color: var(--snow);
   text-align: right;
   padding: 0 25px 0 50px;
