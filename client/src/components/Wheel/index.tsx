@@ -13,17 +13,16 @@ interface WheelProps {
 
 const Wheel = (props: WheelProps) => {
   const { location } = props;
-
   const navigate = useNavigate();
 
   const { mutateAsync: getRestaurants } = useGetRestaurants();
   const [selectedItemIndex, setSelectedItemIndex] = useState<number | null>(
     null
   );
+
   const [restaurants, setRestaurants] = useState<
     GetRestaurantResponse[] | null
   >(null);
-  //restaurants to be passed into modal component
 
   const [modalOpen, setModalOpen] = useState<boolean>(false);
 
@@ -44,19 +43,26 @@ const Wheel = (props: WheelProps) => {
 
   const selectItem = async () => {
     try {
+
       if (selectedItemIndex === null) {
+
         const randomIndex = Math.floor(Math.random() * items.length);
+
         setSelectedItemIndex(randomIndex);
+
         const selectedItem = items[randomIndex];
         const restaurants = await getRestaurants({
           term: selectedItem,
           location: location || 'New York, NY',
         });
+
         setRestaurants(restaurants);
         setTimeout(() => {
           setModalOpen(true);
         }, 4500);
+
       } else {
+
         setSelectedItemIndex(null);
         //leaving this else block so that the wheel resets properly during testing
       }
