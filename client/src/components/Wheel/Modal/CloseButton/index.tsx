@@ -4,14 +4,14 @@ import { IconContext } from 'react-icons';
 import './styles.css'
 
 interface CloseButtonProps {
-  setModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  closeModal: () => void;
 }
 
 const CloseButton = (props: CloseButtonProps) => {
-  const { setModalOpen } = props;
+  const { closeModal } = props;
 
   return (
-    <div className='CloseButton' onClick={() => setModalOpen(false)}>
+    <div className='CloseButton' onClick={() => closeModal()}>
       <IconContext.Provider value={{ color: '#f706cf', size: '2rem' }}>
         <GiKnifeFork />
       </IconContext.Provider>

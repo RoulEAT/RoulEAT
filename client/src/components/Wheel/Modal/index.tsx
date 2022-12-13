@@ -6,16 +6,16 @@ import CloseButton from './CloseButton';
 
 interface ModalProps {
   restaurants: GetRestaurantResponse[];
-  setModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  closeModal: () => void;
 }
 
 const Modal = (props: ModalProps) => {
-  const { restaurants, setModalOpen } = props;
+  const { restaurants, closeModal } = props;
 
   return (
     <div className='ModalContainer'>
       <div className='Modal'>
-        <CloseButton setModalOpen={setModalOpen}/>
+        <CloseButton closeModal={closeModal} />
         {restaurants.map((restaurant) => (
           <Restaurant restaurant={restaurant} key={restaurant.id} />
         ))}

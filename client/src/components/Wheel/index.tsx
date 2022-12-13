@@ -67,6 +67,12 @@ const Wheel = (props: WheelProps) => {
     }
   };
 
+  const closeModal = () => {
+    setModalOpen(false);
+    setSelectedItemIndex(null);
+    setRestaurants(null);
+  }
+
   const spinning = selectedItemIndex !== null ? 'spinning' : '';
 
   const wheelVars = {
@@ -95,7 +101,9 @@ const Wheel = (props: WheelProps) => {
           </div>
         </div>
       )}
-      {restaurants && modalOpen && <Modal restaurants={restaurants} setModalOpen={setModalOpen}/>}
+      {restaurants && modalOpen && (
+        <Modal restaurants={restaurants} closeModal={closeModal} />
+      )}
     </div>
   );
 };
