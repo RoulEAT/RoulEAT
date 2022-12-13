@@ -8,6 +8,9 @@ interface RestaurantInfoLineProps {
 
 const RestaurantInfoLine = (props: RestaurantInfoLineProps) => {
   const { info, icon } = props;
+
+  if (!info) return null;
+  
   return (
     <>
     <h3>{icon}{info}</h3>
