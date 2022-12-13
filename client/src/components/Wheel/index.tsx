@@ -95,7 +95,7 @@ const Wheel = (props: WheelProps) => {
           </div>
         </div>
       )}
-      {restaurants && modalOpen && <Modal restaurants={restaurants} />}
+      {restaurants && modalOpen && <Modal restaurants={restaurants} setModalOpen={setModalOpen}/>}
     </div>
   );
 };

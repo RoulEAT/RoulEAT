@@ -1,0 +1,19 @@
+.CloseButton {
+  border-radius: 100%;
+  background-color: var(--outrunDarkerPurple);
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -.5rem;
+  right: 0;
+  z-index: 200;
+}
+
+.CloseButton:hover {
+  background-color: var(--outrunCyan);
+  transition: 0.5s;
+  filter: drop-shadow(0 0 0.5rem var(--outrunCyan));
+  cursor: pointer;
+}
