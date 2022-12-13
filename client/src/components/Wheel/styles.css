@@ -31,10 +31,11 @@
   height: calc(var(--wheel-size) + 2 * var(--wheel-border-size));
   padding: 3px;
   margin: auto;
-  background-color: var(--neutral-color);
-  border: solid var(--wheel-color) 3px;
+  background-color: var(--snow);
+  border: solid var(--outrunOrange) 3px;
   border-radius: 50%;
   user-select: none;
+  filter: drop-shadow(0 0 0.5rem var(--outrunOrange));
 }
 
 .wheel-container::before,
@@ -53,12 +54,12 @@
 
 .wheel-container::before {
   right: 0px;
-  border-right-color: var(--wheel-color);
+  border-right-color: var(--snow);
 }
 
 .wheel-container::after {
   right: -5px;
-  border-right-color: var(--neutral-color);
+  border-right-color: var(--snow);
 }
 
 .wheel {
@@ -70,8 +71,8 @@
   height: var(--wheel-size);
   overflow: hidden;
   border-radius: 50%;
-  border: solid var(--wheel-color) var(--wheel-border-size);
-  background-color: var(--wheel-color);
+  border: solid var(--outrunRed) var(--wheel-border-size);
+  background-color: var(--outrunRed);
   transition: transform var(--reset-duration);
   transform: rotate(0deg);
   cursor: pointer;
@@ -113,10 +114,12 @@
   transform: translateY(-50%)
     rotate(calc(var(--item-nb) * (360deg / var(--nb-item, 1))));
 
-  color: var(--neutral-color);
+  /* color: var(--neutral-color); */
+  color: var(--snow);
   text-align: right;
   padding: 0 25px 0 50px;
   font-family: var(--wheel-font);
+  font-size: 1.5em;
 }
 
 .wheel-item:before {
