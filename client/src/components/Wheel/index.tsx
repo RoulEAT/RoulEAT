@@ -28,12 +28,12 @@ const Wheel = (props: WheelProps) => {
   const [modalOpen, setModalOpen] = useState<boolean>(false);
 
   const [items, setItems] = useState<string[]>([
-    'Pizza',
-    'Burger',
-    'Ramen',
-    'Curry',
-    'Sushi',
-    'Tacos',
+    'Italian',
+    'American',
+    'Japanese',
+    'Indian',
+    'Mexican',
+    'Chinese',
   ]);
 
   useEffect(() => {
