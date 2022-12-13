@@ -56,7 +56,6 @@ const Wheel = (props: WheelProps) => {
         setTimeout(() => {
           setModalOpen(true);
         }, 4500);
-        //this functionalitiy might be the only one necessary as when we close the modal we can then reset the state of this component back to null thus losing that weird reseetting visual
       } else {
         setSelectedItemIndex(null);
         //leaving this else block so that the wheel resets properly during testing
