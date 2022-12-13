@@ -19,10 +19,14 @@
 
 body {
   margin: 0;
-  font-family: ui-sans-serif;
+  font-family: 'Orbitron', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(to right top, var(--outrunDarkPurple), var(--outrunPurple));
+  background: linear-gradient(
+    to right top,
+    var(--outrunDarkPurple),
+    var(--outrunPurple)
+  );
   background-attachment: fixed;
 }
 
