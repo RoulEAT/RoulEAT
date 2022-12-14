@@ -12,7 +12,7 @@ RoulEAT is built using React, TypeScript, Nodejs, React Icons and React Query. I
 2. Spin the wheel
 3. Browse through the options based on the result
 
-## WEBSITE/PROJECT LINK STILL BEING WORKED ON
+## rouleat.netlify.app
 
 The idea behind RoulEAT came from all the times people would not know what they wanted to eat, only what they didn't want. With RoulEAT, the only thing the user has to do is spin a wheel, and the rest is left up to chance.
 
