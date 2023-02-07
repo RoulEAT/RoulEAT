@@ -5,10 +5,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: sticky;
   top: 0;
   right: 0;
   z-index: 500;
+  margin-left: 100%;
+  margin-bottom: -5%;
 }
 
 .CloseButton:hover {

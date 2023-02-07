@@ -13,15 +13,14 @@ const queryClient = new QueryClient({
 });
 
 function App() {
-
   const [location, setLocation] = useState<string | undefined>('');
 
   return (
     <Router>
       <QueryClientProvider client={queryClient}>
         <Routes>
-          <Route path='/' element={<LandingPage setLocation={setLocation}/>} />
-          <Route path='/wheel' element={<Wheel location={location}/>} />
+          <Route path='/' element={<LandingPage setLocation={setLocation} />} />
+          <Route path='/wheel' element={<Wheel location={location} />} />
         </Routes>
       </QueryClientProvider>
     </Router>
