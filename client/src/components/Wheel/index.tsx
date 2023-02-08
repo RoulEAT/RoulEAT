@@ -43,9 +43,7 @@ const Wheel = (props: WheelProps) => {
 
   const selectItem = async () => {
     try {
-
       if (selectedItemIndex === null) {
-
         const randomIndex = Math.floor(Math.random() * items.length);
 
         setSelectedItemIndex(randomIndex);
@@ -56,15 +54,13 @@ const Wheel = (props: WheelProps) => {
           location: location || 'New York, NY',
         });
 
-        console.log(restaurants);
+        // console.log(restaurants);
 
         setRestaurants(restaurants);
         setTimeout(() => {
           setModalOpen(true);
         }, 4500);
-
       } else {
-
         setSelectedItemIndex(null);
         //leaving this else block so that the wheel resets properly during testing
       }
@@ -78,7 +74,7 @@ const Wheel = (props: WheelProps) => {
     setModalOpen(false);
     setSelectedItemIndex(null);
     setRestaurants(null);
-  }
+  };
 
   const spinning = selectedItemIndex !== null ? 'spinning' : '';
 
