@@ -3,15 +3,28 @@ h1, h2 {
   padding: 0;
   text-align: center;
   align-self: center;
+  color: var(--outrunPink);
+  filter: drop-shadow(0 0 0.5rem var(--outrunLaserPink));
+}
+
+h1 {
+  font-size: 1.5vw;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 1.2vw;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px){
   h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center;
   }
   h2 {
-    font-size: 1.2rem;
+    font-size: 1.0rem;
     text-align: center;
   }
 }

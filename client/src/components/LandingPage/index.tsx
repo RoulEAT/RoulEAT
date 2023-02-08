@@ -8,14 +8,13 @@ interface LandingPageProps {
 }
 
 const LandingPage = (props: LandingPageProps) => {
-
   const { setLocation } = props;
 
   return (
     <div className='LandingPage'>
       <Logo />
       <div className='Container'>
-        <Location setLocation={setLocation}/>
+        <Location setLocation={setLocation} />
       </div>
     </div>
   );

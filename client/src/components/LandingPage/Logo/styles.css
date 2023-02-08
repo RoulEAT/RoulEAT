@@ -1,0 +1,64 @@
+.LogoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  margin-top: 5rem;
+}
+
+.WheelLogo img {
+  width: 100%;
+  height: 100%;
+}
+
+.RoulEatLogo {
+  position: absolute;
+  bottom: 35rem;
+  will-change: filter;
+  transform: rotateY(0deg) rotate(-18deg);
+  transition: filter .5 ease-in-out;
+}
+
+.RoulEatLogo img {
+  width: 100%;
+  height: 100%;
+  animation: flicker 2.5s infinite alternate;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+  .RoulEatLogo {
+    bottom: 40rem;
+    left: .8rem;
+  }
+}
+
+@keyframes flicker {
+  0% {
+    filter: drop-shadow(0 0 0.5rem var(--outrunCyan));
+  }
+  2% {
+    filter: drop-shadow(0 0 0.8rem var(--outrunCyan));
+  }
+  4% {
+    filter: drop-shadow(0 0 0.2rem var(--outrunCyan));
+  }
+  8% {
+    filter: drop-shadow(0 0 0.9rem var(--outrunCyan));
+  }
+  70% {
+    filter: drop-shadow(0 0 0.5rem var(--outrunCyan));
+  }
+  100% {
+    filter: drop-shadow(0 0 1rem var(--outrunCyan));
+  }
+}
+
+
+
+
+
+
+

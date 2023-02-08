@@ -1,5 +1,5 @@
 .ModalContainer {
-  position: fixed;
+  position: relative;
   z-index: 100;
   left: 0;
   top: 0;
@@ -9,16 +9,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  -webkit-animation: fadein 0.3s;
-  -moz-animation: fadein 0.3s;
-  -ms-animation: fadein 0.3s;
-  animation: fadein 0.3s;
 }
 
 .Modal {
   height: 90%;
   width: 40%;
-  background-color: var(--fire);
+  background-color: var(--outrunDarkPurple);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,11 +22,12 @@
   padding: 1rem 2rem;
   border-radius: 1rem;
   gap: 1rem;
-  box-shadow: 0 0 1rem 0 var(--snow);
+  box-shadow: 0 0 1rem 0 var(--outrunPink);
   overflow: auto;
+  position: relative;
 }
 
-@media screen and (min-width: 320px) and (max-width: 480px){
+@media screen and (min-width: 320px) and (max-width: 480px) {
   .Modal {
     width: 80%;
   }
@@ -38,13 +35,4 @@
 
 .Modal::-webkit-scrollbar {
   display: none;
-}
-
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
