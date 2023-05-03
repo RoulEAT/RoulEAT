@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className='Footer'>
       <p>
-        ©ROULEAT was designed and developed by{' '}
+        ©RoulEAT was designed and developed by{' '}
         <a
           href='https://www.github.com/will-watson'
           target='_blank'
