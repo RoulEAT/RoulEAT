@@ -1,1 +1,15 @@
+.Footer {
+  position: fixed;
+  bottom: 0;
+  color: var(--outrunPink);
+}
+
+a {
+  color: var(--outrunCyan);
+}
+
+a:hover {
+  color: var(--outrunPink);
+  text-decoration: none;
+}
 

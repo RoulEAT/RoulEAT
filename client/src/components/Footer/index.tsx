@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className='Footer'>
       <p>
-        RoulEAT was Designed and Developed by{' '}
+        ©ROULEAT was designed and developed by{' '}
         <a
           href='https://www.github.com/will-watson'
           target='_blank'
@@ -14,8 +14,8 @@ const Footer = () => {
           William Watson
         </a>{' '}
         and{' '}
-        <a href='https://www.github.com/JCOOK' target='_blank' rel='noreferrer'>
-          Jeremy Cook
+        <a href='https://www.github.com/JC00K' target='_blank' rel='noreferrer'>
+          Jeremy Cook.
         </a>
       </p>
     </div>
