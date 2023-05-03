@@ -13,3 +13,9 @@ a:hover {
   text-decoration: none;
 }
 
+@media only screen and (max-width: 600px) {
+  .Footer {
+    font-size: .8rem;
+    text-align: center;
+  }
+}
