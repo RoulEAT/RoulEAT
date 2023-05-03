@@ -54,8 +54,6 @@ const Wheel = (props: WheelProps) => {
           location: location || 'New York, NY',
         });
 
-        // console.log(restaurants);
-
         setRestaurants(restaurants);
         setTimeout(() => {
           setModalOpen(true);
