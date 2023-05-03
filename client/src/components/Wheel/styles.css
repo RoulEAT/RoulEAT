@@ -14,6 +14,12 @@
   --reset-duration: 0.25s;
 }
 
+ @media only screen and (max-width: 600px) {
+  :root {
+    --wheel-size: 380px;
+  }
+}
+
 .Wheel {
   display: flex;
   justify-content: center;
@@ -144,3 +150,4 @@
   border-left: solid transparent 0;
   border-right: solid var(--neutral-color) calc(var(--wheel-size) / 2);
 }
+
