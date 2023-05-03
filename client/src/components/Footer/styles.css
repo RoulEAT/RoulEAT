@@ -9,7 +9,7 @@ a {
 }
 
 a:hover {
-  color: var(--outrunPink);
+  color: var(--outrunOrange);
   text-decoration: none;
 }
 
