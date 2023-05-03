@@ -83,6 +83,8 @@ const Wheel = (props: WheelProps) => {
 
   return (
     <div className='Wheel'>
+      <p className='wheel-text-mobile'>TAP TO SPIN!</p>
+      <p className='wheel-text'>CLICK TO SPIN!</p>
       {!modalOpen && (
         <div className='wheel-container'>
           <div
