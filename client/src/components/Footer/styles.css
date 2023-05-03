@@ -6,6 +6,7 @@
 
 a {
   color: var(--outrunCyan);
+  text-decoration: none;
 }
 
 a:hover {
